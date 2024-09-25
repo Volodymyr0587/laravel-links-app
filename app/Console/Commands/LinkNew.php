@@ -19,23 +19,23 @@ class LinkNew extends Command
      *
      * @var string
      */
-    protected $description = 'Create a New Link';
+    protected $description = 'Create a new link';
 
     /**
      * Execute the console command.
      */
     public function handle()
     {
-        $url = $this->ask("Link URL: ");
+        $url = $this->ask("Link URL");
 
         if (!filter_var($url, FILTER_VALIDATE_URL)) {
             $this->error("Invalid URL. Exiting...");
             return 1;
         }
 
-        $description = $this->ask('Link Description: ');
+        $description = $this->ask('Link Description');
 
-        $this->info("New Link: ");
+        $this->info("New Link:");
         $this->info($url . ' - ' . $description);
 
         if ($this->confirm("Is this information correct?")) {
