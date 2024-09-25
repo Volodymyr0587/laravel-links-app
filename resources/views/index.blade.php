@@ -32,7 +32,7 @@
             Check out my awesome links
         </h1>
         <p class="subtitle">
-            You can include a little description here.
+            Keep what is important to you.
         </p>
 
         <section class="links">
